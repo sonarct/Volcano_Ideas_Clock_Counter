@@ -24,6 +24,7 @@ ClockCounter.prototype = {
 		this.days = Math.floor(this.timeDifference / 86400);
 		this.daysDivNext.innerText = addZero(this.days.toString());
 
+
 		//hours
 		this.hours = Math.floor((this.timeDifference - this.days * 86400) / 3600);
 		this.hoursDivNext.innerText = addZero(this.hours.toString());
@@ -43,6 +44,7 @@ ClockCounter.prototype = {
 				tempDivNext.classList.add('move');
 			}, 20)
 		}
+
 
 		if (this.days != this.lastDays) {
 			this.daysDiv.classList.remove('move');
@@ -64,8 +66,9 @@ ClockCounter.prototype = {
 			this.minutesDiv.classList.remove('move');
 			this.minutesDivNext.classList.remove('move');
 			this.minutesDiv.innerText = addZero(this.lastMinutes.toString());
-			restoreDiv(this.minutesDiv, this.minutesDivNext);
 			this.lastMinutes = this.minutes;
+			restoreDiv(this.minutesDiv, this.minutesDivNext);
+			
 		}
 
 		if (this.seconds != this.lastSeconds) {
@@ -95,50 +98,42 @@ ClockCounter.prototype = {
 		//days
 		this.daysDiv = document.createElement('div');
 		this.daysDiv.className = 'counterChildren days';
-		this.daysDiv.style.backgroundImage = 'url(img/div.png)';
 		this.daysDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.daysDiv);
 		//hours
 		this.hoursDiv = document.createElement('div');
 		this.hoursDiv.className = 'counterChildren hours';
-		this.hoursDiv.style.backgroundImage = 'url(img/div.png)';
 		this.hoursDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.hoursDiv);
 		//minutes
 		this.minutesDiv = document.createElement('div');
 		this.minutesDiv.className = 'counterChildren minutes';
-		this.minutesDiv.style.backgroundImage = 'url(img/div.png)';
 		this.minutesDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.minutesDiv);
 		//seconds
 		this.secondsDiv = document.createElement('div');
 		this.secondsDiv.className = 'counterChildren seconds';
-		this.secondsDiv.style.backgroundImage = 'url(img/div.png)';
 		this.secondsDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.secondsDiv);
 
 		//days next
 		this.daysDivNext = document.createElement('div');
 		this.daysDivNext.className = 'counterChildren counterChildrenNext days';
-		this.daysDivNext.style.backgroundImage = 'url(img/div.png)';
 		this.daysDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.daysDivNext);
 		//hours next
 		this.hoursDivNext = document.createElement('div');
 		this.hoursDivNext.className = 'counterChildren counterChildrenNext hours';
-		this.hoursDivNext.style.backgroundImage = 'url(img/div.png)';
 		this.hoursDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.hoursDivNext);
 		//minutes next
 		this.minutesDivNext = document.createElement('div');
 		this.minutesDivNext.className = 'counterChildren counterChildrenNext minutes';
-		this.minutesDivNext.style.backgroundImage = 'url(img/div.png)';
 		this.minutesDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.minutesDivNext);
 		//seconds next
 		this.secondsDivNext = document.createElement('div');
 		this.secondsDivNext.className = 'counterChildren counterChildrenNext seconds';
-		this.secondsDivNext.style.backgroundImage = 'url(img/div.png)';
 		this.secondsDiv.innerText = '--';
 		this.counterChildrenLayoutDiv.appendChild(this.secondsDivNext);
 	}
