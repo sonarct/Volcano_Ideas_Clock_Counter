@@ -76,7 +76,7 @@ ClockCounter.prototype = {
 			this.lastSeconds = this.seconds;
 		}
 	},
-	drawCounter: function() {
+	drawCounter: function(place) {
 		//countering/
 		this.counterDiv = document.createElement('div');
 		this.counterDiv.className = 'counter';
@@ -85,7 +85,7 @@ ClockCounter.prototype = {
 		//Town
 		this.townDiv = document.createElement('div');
 		this.townDiv.className = 'town';
-		this.townDiv.innerHTML = 'Рязань, АСК Атрон';
+		this.townDiv.innerHTML = place;
 		this.counterDiv.appendChild(this.townDiv);
 		//layout
 		this.counterChildrenLayoutDiv = document.createElement('div');
