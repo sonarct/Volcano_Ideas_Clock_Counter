@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.counter {
+    position: absolute;
+    width: 298px;
+    height: 119px;
+}
+
+.counterChildrenLayout {
+    position: absolute;
+    overflow: hidden;
+    width: 264px;
+    height: 28px;
+    margin-left: 19px;
+    margin-top: 59px;
+}
+
+
+.counterChildren {
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 59px;
+    font-family: 'Russo One';
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    background-position: center top;
+}
+
+
+.counterChildrenNext {
+    z-index: 500;
+    background-position: center top;
+    top: -26px;
+}
+
+
+.move {
+    transform: translateY(26px);
+    transition: transform 0.5s;
+}
+
+
+.days {
+
+}
+
+
+.hours {
+    left: 68px;
+}
+
+
+.minutes {
+    left: 135px;
+}
+
+
+.seconds {
+    left: 203px;
+}
+
+
+.town {
+    position: absolute;
+    height: 30px;
+    width: 298px;
+    color: white;
+    background-color: #464646;
+    border-radius: 17px;
+    text-align: center;
+    top: 118px;
+    font-family: 'Exo 2';
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+}
