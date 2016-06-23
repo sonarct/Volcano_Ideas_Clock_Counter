@@ -3,6 +3,11 @@ function ClockCounter() {
 	this.lastHours = '--';
 	this.lastMinutes = '--';
 	this.lastDays = '--';
+
+	this.daysEnding = ['день', 'дня', 'дней'],
+	this.hoursEnding = ['час', 'часа', 'часов'],
+	this.minutesEnding = ['минута', 'минуты', 'минут'],
+	this.secondsEnding = ['секунда', 'секунды', 'секунд']
 }
 
 
@@ -18,24 +23,52 @@ ClockCounter.prototype = {
 			return n.length > 1 ? n : "0" + n;
 		}
 
+
+		function repairEnding(number) {
+			if (number>10 && number <15) {
+				return 2;
+			}
+			var temp = number % 10
+			switch(temp) {
+				case 1: 
+					return 0;
+					break;
+				case 2:
+					return 1;
+					break;
+				case 3:
+					return 1;
+					break;
+				case 4:
+					return 1;
+					break;
+				default:
+					return 2;
+			}
+		}
+
 		this.Date = Date.now();
 		this.timeDifference = Math.max(Math.floor((this.countDate - this.Date) / 1000), 0);
 		//days
 		this.days = Math.floor(this.timeDifference / 86400);
 		this.daysDivNext.innerText = addZero(this.days.toString());
-
+		this.textDaysDiv.innerText = this.daysEnding[repairEnding(this.days)]
 
 		//hours
 		this.hours = Math.floor((this.timeDifference - this.days * 86400) / 3600);
 		this.hoursDivNext.innerText = addZero(this.hours.toString());
+		this.textHoursDiv.innerText = this.hoursEnding[repairEnding(this.hours)]
+
 
 		//minutes
 		this.minutes = Math.floor((this.timeDifference - this.days * 86400 - this.hours * 3600) / 60);
 		this.minutesDivNext.innerText = addZero(this.minutes.toString());
+		this.textMinutesDiv.innerText = this.minutesEnding[repairEnding(this.minutes)]
 
 		//seconds
 		this.seconds = Math.floor(this.timeDifference - this.days * 86400 - this.hours * 3600 - this.minutes * 60);
 		this.secondsDivNext.innerText = addZero(this.seconds.toString());
+		this.textSecondsDiv.innerText = this.secondsEnding[repairEnding(this.seconds)]
 
 		
 		function restoreDiv(tempDiv, tempDivNext) {
@@ -88,12 +121,34 @@ ClockCounter.prototype = {
 		//Town
 		this.townDiv = document.createElement('div');
 		this.townDiv.className = 'town';
-		this.townDiv.innerHTML = place;
+		this.townDiv.innerText = place;
 		this.counterDiv.appendChild(this.townDiv);
 		//layout
 		this.counterChildrenLayoutDiv = document.createElement('div');
 		this.counterChildrenLayoutDiv.className = 'counterChildrenLayout';
 		this.counterDiv.appendChild(this.counterChildrenLayoutDiv);
+
+		//text
+		//days
+		this.textDaysDiv = document.createElement('div');
+		this.textDaysDiv.className = 'text days';
+		this.textDaysDiv.innerText = 'дней';
+		this.counterDiv.appendChild(this.textDaysDiv);
+		//hours
+		this.textHoursDiv = document.createElement('div');
+		this.textHoursDiv.className = 'text hours';
+		this.textHoursDiv.innerText = 'часов';
+		this.counterDiv.appendChild(this.textHoursDiv);
+		//minutes
+		this.textMinutesDiv = document.createElement('div');
+		this.textMinutesDiv.className = 'text minutes';
+		this.textMinutesDiv.innerText = 'минуты';
+		this.counterDiv.appendChild(this.textMinutesDiv);
+		//seconds
+		this.textSecondsDiv = document.createElement('div');
+		this.textSecondsDiv.className = 'text seconds';
+		this.textSecondsDiv.innerText = 'секунд';
+		this.counterDiv.appendChild(this.textSecondsDiv);		
 
 		//days
 		this.daysDiv = document.createElement('div');

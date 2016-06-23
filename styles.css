@@ -1,52 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .counter {
-    position: absolute;
-    width: 298px;
-    height: 119px;
+	position: absolute;
+	width: 298px;
+	height: 119px;
 }
 
 .counterChildrenLayout {
-    position: absolute;
-    overflow: hidden;
-    width: 264px;
-    height: 28px;
-    margin-left: 19px;
-    margin-top: 59px;
+	position: absolute;
+	overflow: hidden;
+	width: 264px;
+	height: 28px;
+	margin-left: 19px;
+	margin-top: 59px;
 }
 
 
 .counterChildren {
-    position: absolute;
-    display: block;
-    height: 26px;
-    width: 59px;
-    font-family: 'Russo One';
-    font-size: 26px;
-    color: white;
-    text-align: center;
-    z-index: 1000;
-    background-position: center top;
+	position: absolute;
+	display: block;
+	height: 26px;
+	width: 59px;
+	font-family: 'Russo One';
+	font-size: 26px;
+	color: white;
+	text-align: center;
+	z-index: 1000;
+	background-position: center top;
 }
 
 
 .counterChildrenNext {
-    z-index: 500;
-    background-position: center top;
-    top: -26px;
+	z-index: 500;
+	background-position: center top;
+	top: -26px;
 }
 
 
 .move {
-    -webkit-transform: translate(0,26px);
-    -ms-transform: translate(0,26px);
-    transform: translate(0,26px);
-    transition: -webkit-transform 0.5s;
-    transition: -ms-transform 0.5s;
-    transition: transform 0.5s;
+	-webkit-transform: translate(0,26px);
+	-ms-transform: translate(0,26px);
+	transform: translate(0,26px);
+	transition: -webkit-transform 0.5s;
+	transition: -ms-transform 0.5s;
+	transition: transform 0.5s;
 }
 
 
@@ -56,31 +56,43 @@
 
 
 .hours {
-    left: 68px;
+	left: 68px;
 }
 
 
 .minutes {
-    left: 135px;
+	left: 135px;
 }
 
 
 .seconds {
-    left: 203px;
+	left: 203px;
 }
 
 
 .town {
-    position: absolute;
-    height: 30px;
-    width: 298px;
-    color: white;
-    background-color: #464646;
-    border-radius: 17px;
-    text-align: center;
-    top: 118px;
-    font-family: 'Exo 2';
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 5px;
+	position: absolute;
+	height: 30px;
+	width: 298px;
+	color: white;
+	background-color: #464646;
+	border-radius: 17px;
+	text-align: center;
+	top: 118px;
+	font-family: 'Exo 2';
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 5px;
+}
+
+
+.text {
+	width: 59px;
+	position: absolute;
+	color: white;
+	margin-left: 19px;
+	margin-top: 86px;
+	font-family: 'Exo 2';
+	font-size: 13px;
+	text-align: center;
 }
