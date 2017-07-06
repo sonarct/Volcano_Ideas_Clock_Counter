@@ -41,7 +41,7 @@ var datesOfEvents = [
 ];
 
 
-chooseEventDate()
+// chooseEventDate()
 
 
 function chooseEventDate() {
@@ -55,4 +55,9 @@ function chooseEventDate() {
 	}
 }
 
-
+(function() {
+	var date = new Date()
+	date.setMonth(date.getDate() + 1)
+	myClock.setDate(date)
+	myClock.drawCounter(datesOfEvents[0].place)
+})()
