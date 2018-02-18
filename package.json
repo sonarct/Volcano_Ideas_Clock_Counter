@@ -1,0 +1,27 @@
+{
+  "name": "countdown",
+  "version": "1.0.0",
+  "description": "My very first production task. Simple countdown for motogp competitions.",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  },
+  "scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"start": "http-server ./public",
+	"build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonarct/countdown.git"
+  },
+  "author": "sonarct@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonarct/countdown/issues"
+  },
+  "homepage": "https://github.com/sonarct/countdown#readme"
+}

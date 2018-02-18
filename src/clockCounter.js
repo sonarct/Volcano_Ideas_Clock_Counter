@@ -193,3 +193,5 @@ ClockCounter.prototype = {
 		this.counterChildrenLayoutDiv.appendChild(this.secondsDivNext);
 	}
 };
+
+export default ClockCounter;

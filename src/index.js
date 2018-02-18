@@ -1,3 +1,5 @@
+import ClockCounter from './clockCounter';
+
 var myClock = new ClockCounter()
 var animationStart = setTimeout(function animate() {
 	myClock.countdown()
