@@ -1,5 +1,16 @@
 # Countdown to event date
 
-My very first production task. Simple countdown for motogp competitions.
+Simple countdown for motogp competitions web-site. Based on vanilla js.
 
-You can try it [here](https://sonarct.github.io/countdown)
+To run project, please, clone repo. Then
+
+```
+cd countdown
+npm i
+npm build
+npm start
+```
+
+And check result on [localhost:8080](http://localhost:8080)
+
+Thank you
